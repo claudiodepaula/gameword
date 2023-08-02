@@ -16,6 +16,10 @@ function App() {
   const [gameCategory, setGameCategory] = useState('')
   const [gameLetters, setGameLetters] = useState([])
   const [stage, setStage] = useState(gameStage[0].name);
+  const [lifes, setLifes] = useState(10);
+  const [points, setpoints] = useState(0);
+  const [guessedLetters, setGuessedLetters] = useState([]);
+  const [wrongLetters, setWrongLetters] = useState(["a", "b"]);
 
 
   //Funções
@@ -41,8 +45,8 @@ function App() {
     setStage(gameStage[1].name)
   }
 
-  const checkWord = () => {
-    setStage(gameStage[2].name)
+  const checkWord = (usedLetter) => {
+    console.log('usedLetter ', usedLetter);
   }
 
   const endGame = () => {
@@ -58,7 +62,9 @@ function App() {
       
       <div>
         {stage === 'start' &&  <StartScreen startGame={startGame}/>}
-        {stage === 'game' &&  <Game checkWord={checkWord}/>}
+        {stage === 'game' &&  <Game checkWord={checkWord} 
+                                tip={gameCategory} gameWord={gameWord} gameLetters={gameLetters} lifes={lifes} wrongLetters={wrongLetters} points={points} guessedLetters={guessedLetters}
+                              />}
         {stage === 'end' &&  <EndGame endGame={endGame}/>}
       </div>
     </div>

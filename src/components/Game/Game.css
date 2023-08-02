@@ -1,0 +1,99 @@
+.Game{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameWindowTitle > p {
+  font-weight: bold;
+}
+
+.gameWindowTitle > p > span {
+  color: yellow;
+  font-weight: normal;
+}
+
+.wordContainer {
+  display: flex;
+  justify-content: center;
+  border: 8px solid yellow;
+  padding: 8px;
+}
+
+.okLetters{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 32px;
+  background-color: white;
+  color: black;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+}
+
+.blankSquare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 32px;
+  background-color: white;
+  color: white;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  margin-left: 4px;
+}
+
+.wrongLetters{
+  margin-top: 4px;
+}
+
+.wrongLetters > span {
+  font-weight: bold;
+}
+
+.checkButton > form > button {
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  transition: .4s;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(28, 28, 224);
+  border-color: white;
+}
+
+.checkButton > form{
+  display: flex;
+  width: 270px;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.checkButton > form > input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 32px;
+  background-color: white;
+  color: black;
+  width: 50px;
+  height: 40px;
+  padding: 2px;
+  margin-right: 4px;
+}
